@@ -1,0 +1,138 @@
+
+ body {
+     
+  background-image: url('beirut.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Sofia', sans-serif;
+  
+}
+h1{
+    color:burlywood;
+    text-align:center;
+    font-size:60px;
+    font-family: 'Sofia', sans-serif;
+    margin-bottom: 0%;
+    font-weight: bolder;
+  
+  }
+  .warp{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tab{
+    cursor: pointer;
+    padding:10px 20px;
+    margin:0px 2px;
+    background: burlywood;
+    display:inline-block;
+    color:#fff;
+    border-radius:3px 3px 0px 0px;
+    box-shadow: 0 0.5rem 0.8rem #00000080;
+  }
+  .panels{
+    background: rgb(245, 245, 245,0.3);
+    color: #000;
+    font-weight: bold;
+    font-style: italic;
+    font-size: larger;
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.502);
+    min-height:100px;
+    width:100%;
+    max-width:500px;
+    border-radius:3px;
+    overflow:hidden;
+  }
+  .panel{
+    display:none;
+    animation: fadein .8s;
+  }
+  @keyframes fadein {
+      from {
+          opacity:0;
+      }
+      to {
+          opacity:1;
+      }
+  }
+  
+  .radio{
+    display:none;
+  }
+  #one:checked ~ .panels #one-panel,
+  #two:checked ~ .panels #two-panel{
+    display:block
+  }
+  #one:checked ~ .tabs #one-tab,
+  #two:checked ~ .tabs #two-tab{
+    background:rgba(255, 255, 255, 0.965);
+    color:#000;
+    border-top: 3px solid  burlywood;
+  }
+
+  .fc{
+      display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+form{
+    padding: 50px;
+}
+form input{
+    width: 200px;
+    display: block;
+    padding: 5px;
+    margin: auto;
+    background-color: rgba(236, 210, 186, 0.973,0.);
+    border-color: transparent;
+  
+}
+::placeholder {
+  color:silver;
+  font-weight: bolder;
+  font-style: italic;
+}
+form label{
+    width: 200px;
+    display: block;
+    padding: 10px;
+}
+.fc2{
+    margin-left: 15%;
+}
+
+.fc2 label {
+   width: 100px;
+}
+
+form button{
+    align-items: center;
+    
+}
+button{
+  margin-top: 3%;
+  border: 1;
+  border-radius: 45%;
+  box-shadow: black;
+  width: 40%;
+  height: 50px;
+  background-color: burlywood;
+  border-color: transparent;
+  color: #fff;
+  font-weight: bold;
+  font-size: medium;
+  font-style: oblique;
+}
+  button:hover{
+    background-color: rgb(190, 122, 94);
+    border-color: transparent;
+  }
+
+.error{
+    font-style: italic;
+    color:red;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
